@@ -1,5 +1,31 @@
 [user]
 	name = Ranjhith Kalisamy
 	email = ranjhith.kumar@gmail.com
+
+[color]
+	status = auto
+	diff = auto
+	interactive = auto
+	branch = auto
+	ui = auto
+
+[core]
+	editor = vim
+
 [github]
 	user = ranjhith
+
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hi = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ty = cat-file -t
+	du = cat-file -p
+	on = log --pretty=oneline
+	la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+	lo = log
+	gr = grep -n
+	cp = cherry-pick
+

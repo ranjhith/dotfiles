@@ -11,9 +11,10 @@ function symlink {
 }
 
 for dotfile in .emacs .bashrc-custom.sh .fonts .gitconfig .hgrc .screenrc \
-               .xbindkeysrc .zshrc .vimrc .buildout .sources .tmux.conf;
+               .xbindkeysrc .zshrc .vimrc .buildout .sources .tmux.conf \
+               .bashrc .gitignore;
 do
-symlink `pwd`/$dotfile ~/$dotfile;
+    symlink `pwd`/$dotfile ~/$dotfile;
 done
 
 echo "Read this script to see programs to install."
