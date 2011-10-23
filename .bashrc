@@ -1,3 +1,4 @@
+
 alias ls="ls --color=tty"
 alias vi="vim"
 alias gco="git co"
@@ -12,6 +13,10 @@ alias gla="git la"
 alias glo="git lo"
 alias ggr="git gr"
 
-source ~/git/git-completion.sh
+if [ -f ~/git/git-completion.sh ]; then
+	source ~/git/git-completion.sh
+elif [ /etc/bash_completion ]; then
+	source /etc/bash_completion
+fi
 
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
