@@ -2,22 +2,30 @@
 # This script is meant to be run on new machines with newly created user
 # account.
 
+files_to_skip="setup.sh README"
+
+function listcontains {
+  for word in $1; do
+    if [[ $word = $2 ]] ; then
+      return 0
+    fi
+  done
+  return 1
+}
+
 function symlink {
     target=$1
     link=$2
-    echo "symlink: $link => $target"
-    rm $link
+    echo "symlink: $link -> $target"
+    rm -f $link
     ln -sf $target $link
 }
 
-for dotfile in .emacs .bashrc-custom.sh .fonts .gitconfig .hgrc .screenrc \
-               .xbindkeysrc .zshrc .vimrc .buildout .sources .tmux.conf \
-               .bashrc .gitignore;
+for dotfile in $(find . -maxdepth 1 -type f -printf '%f\n')
 do
-    symlink `pwd`/$dotfile ~/$dotfile;
+    if listcontains "$files_to_skip" $dotfile ; then
+        echo "Skipping" $dotfile
+    else
+        symlink `pwd`/$dotfile ~/$dotfile;
+    fi
 done
-
-echo "Read this script to see programs to install."
-# apt-get install emacs-snapshot-gtk tmux zsh git-core wmctrl \
-# build-essential python-dev ack-grep colordiff multitail tig \
-# msttcorefonts
