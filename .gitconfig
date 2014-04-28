@@ -11,6 +11,7 @@
 
 [core]
 	editor = vim
+	quotepath = false
 
 [github]
 	user = ranjhith
@@ -18,7 +19,7 @@
 [alias]
 	co = checkout
 	ci = commit
-	st = status
+	st = status -sb
 	br = branch
 	hi = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ty = cat-file -t
@@ -28,4 +29,5 @@
 	lo = log
 	gr = grep -n
 	cp = cherry-pick
+	df = diff --word-diff
 
