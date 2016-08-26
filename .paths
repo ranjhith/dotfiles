@@ -1,0 +1,4 @@
+export GOPATH=~/tools/go/bin
+export PATH=~/tools:~/scripts:~/tools/go/bin:$PATH
+export ANDROID_HOME=~/tools/android-sdk
+
