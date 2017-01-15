@@ -12,6 +12,8 @@
 [core]
 	editor = vim
 	quotepath = false
+	preloadindex = true
+	fscache = true
 
 [github]
 	user = ranjhith
@@ -31,3 +33,8 @@
 	cp = cherry-pick
 	df = diff --word-diff
 
+[filter "trimWhitespace"]
+	clean = git-stripspace
+
+[gc]
+	auto = 256
