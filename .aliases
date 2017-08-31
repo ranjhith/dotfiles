@@ -21,4 +21,4 @@ alias vpnstatus='f5fpc --info'
 
 alias python=python3
 alias hiber='sudo pm-hibernate'
-alias upup='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt clean'
+alias upup='sudo apt --yes update && sudo apt --yes upgrade && sudo apt --yes autoremove && sudo apt --yes clean'

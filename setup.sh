@@ -2,7 +2,7 @@
 # This script is meant to be run on new machines with newly created user
 # account.
 
-files_to_skip="setup.sh README"
+files_to_skip="setup.sh README.md .gitignore"
 
 function listcontains {
   for word in $1; do
