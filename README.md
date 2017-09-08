@@ -10,9 +10,8 @@ include () {
     fi
 }
 
-inlude .envs
+include .envs
 include .aliases
-include .profile
 include .startup
 ```
-Then run `setup.sh`.
+Then run `./setup.sh`.
