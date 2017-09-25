@@ -16,9 +16,13 @@ function listcontains {
 function symlink {
     target=$1
     link=$2
-    echo "symlink: $link -> $target"
-    rm -f $link
-    ln -sf $target $link
+    if [ -f $link ]
+    then
+        echo "$link already exists! Rename or delete it."
+    else
+        echo "Creating symlink: $link --> $target"
+        ln -sf $target $link
+    fi
 }
 
 for dotfile in $(find . -maxdepth 1 -type f -printf '%f\n')

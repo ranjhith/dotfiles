@@ -1,7 +1,9 @@
+= What? =
 Collection of files that begin with a DOT.
 
-Some files may be hidden from the default listing, use `ls -a` to see all files.
+NOTE: Some files in this repo may be hidden from the default listing, use `ls -a` to see all files.
 
+= How? =
 In your shell's rc file (such as ~/.bashrc) add this:
 ```
 include () {
