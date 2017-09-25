@@ -1,9 +1,11 @@
-= What? =
+# What?
+
 Collection of files that begin with a DOT.
 
 NOTE: Some files in this repo may be hidden from the default listing, use `ls -a` to see all files.
 
-= How? =
+# How?
+
 In your shell's rc file (such as ~/.bashrc) add this:
 ```
 include () {
