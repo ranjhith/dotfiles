@@ -9,8 +9,8 @@ NOTE: Some files in this repo may be hidden from the default listing, use `ls -a
 In your shell's rc file (such as ~/.bashrc) add this:
 ```
 include_file () {
-    if [ -f $(HOME)/$1 ]; then
-        . $(HOME)/$1
+    if [ -f ${HOME}/$1 ]; then
+        . ${HOME}/$1
     fi
 }
 

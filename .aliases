@@ -18,5 +18,7 @@ alias g="git"
 #alias mosh='mosh --server="LANG=$LANG mosh-server"'
 
 alias python=python3
+
 alias hiber='sudo pm-hibernate'
 alias upup='sudo apt --yes update && sudo apt --yes upgrade && sudo apt --yes autoremove && sudo apt --yes clean'
+alias tnew='tmux attach -d || tmux new'
