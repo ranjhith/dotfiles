@@ -8,14 +8,14 @@ NOTE: Some files in this repo may be hidden from the default listing, use `ls -a
 
 In your shell's rc file (such as ~/.bashrc) add this:
 ```
-include () {
+include_file () {
     if [ -f $(HOME)/$1 ]; then
         . $(HOME)/$1
     fi
 }
 
-include .envs
-include .aliases
-include .startup
+include_file .envs
+include_file .aliases
+include_file .startup
 ```
 Then run `./setup.sh`.

@@ -1,5 +1,5 @@
 # Connect to tmux
-if [ -z ${TMUX} ]; then
-	tmux attach -d || tmux new
-fi
+#if [ -z ${TMUX} ]; then
+#	tmux attach -d || tmux new
+#fi
 

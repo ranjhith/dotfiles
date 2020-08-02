@@ -1,8 +1,12 @@
-export GOPATH=${HOME}/tools/go/bin
-export ANDROID_HOME={HOME}/tools/android-sdk
-export ANDROID_NDK={ANDROID_HOME}/ndk-bundle
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+#export GOPATH=${HOME}/tools/go/bin
+#export PATH=$PATH:/usr/local/go/bin
 
-export PATH=${HOME}/tools:${HOME}/scripts:${HOME}/tools/flutter/bin:${ANDROID_HOME}/platform-tools:$PATH
-export PATH=$PATH:/usr/local/go/bin
+export ANDROID_HOME={HOME}/Android/Sdk
+export ANDROID_NDK={ANDROID_HOME}/ndk/21.3.6528147
 
+#export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+export PATH=$PATH:${HOME}.local/bin:${HOME}/tools:${HOME}/scripts:${ANDROID_HOME}/platform-tools
+
+# Colors in CLI, https://bixense.com/clicolors/
+CLICOLOR=1

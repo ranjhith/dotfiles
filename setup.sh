@@ -33,3 +33,6 @@ do
         symlink `pwd`/$dotfile ~/$dotfile;
     fi
 done
+
+# gitalias symlink
+symlink `pwd`/gitalias/gitalias.txt ~/gitalias.txt;
